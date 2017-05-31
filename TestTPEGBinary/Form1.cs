@@ -23,7 +23,7 @@ namespace TestTPEGBinary
         {
             OpenFileDialog dialogBrowse = new OpenFileDialog();
             DialogResult result = dialogBrowse.ShowDialog();
-            if (result == DialogResult.OK)
+            if (result == DialogResult.OK) 
             {
                 string responseGZip = File.ReadAllText(dialogBrowse.FileName);
                 byte[] parsedValue = ParseResponseContentAsbyteAsync(Convert.FromBase64String(responseGZip)).Result;
